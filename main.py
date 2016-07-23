@@ -5,10 +5,11 @@ from time import sleep
 import simplejson as json
 
 
+delay = 2
+
 LOGIN_USR_ID = "sid"
 LOGIN_PSW_ID = "PIN"
 career = "040013-Ingenieria Civil"
-delay = 2
 data = None
 ready = False
 per_sel = False
