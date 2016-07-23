@@ -1,0 +1,1 @@
+Necesitas Python 3.4, simplejson y selenium (pip install selenium simplejson) y Mozilla Firefox. Corres el configUC.py primero para generar tu archivo de configuracion y luego corres el main.py cuando quede menos de un minuto para tu horario. No me hago responsable de ningun mal uso ni perdida de cupos con este software
