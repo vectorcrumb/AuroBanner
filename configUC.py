@@ -5,6 +5,8 @@ def main():
     data = {}
 
     data['nrc_code'] = []
+    carr = input("Ingresa el codigo de tu carrera. El codigo por defecto es 040013-Ingenieria Civil. Apreta ENTER para seleccionarlo.\n")
+    data['code_car'] = carr if len(carr) >= 6 else "040013-Ingenieria Civil"
     data['username'] = input("Ingrese tu nombre de usuario UC:\n")
     data['password'] = input("Ingresa tu clave para tu usuario UC:\n")
     # TODO Sanitize semester input

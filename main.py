@@ -2,14 +2,13 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from os import listdir
 from time import sleep
+import configUC
 import simplejson as json
 
 
-delay = 2
-
 LOGIN_USR_ID = "sid"
 LOGIN_PSW_ID = "PIN"
-career = "040013-Ingenieria Civil"
+delay = 2
 data = None
 ready = False
 per_sel = False
@@ -19,8 +18,12 @@ if 'config.json' in listdir():
     with open('config.json') as json_file:
         data = json.load(json_file)
 else:
-    print("Corre configUC.py antes para ingresar tus configuraciones.")
-    exit()
+    # print("Corre configUC.py antes para ingresar tus configuraciones.")
+    # exit()
+    print("Coriendo configurador")
+    configUC.main()
+    print("Corre nuevamente el programa!")
+    exit(2)
 
 
 # Generate semester dropdown text
@@ -101,6 +104,7 @@ user_cred = data['username']
 pass_cred = data['password']
 semestre = gen_sem(data['semestre'])
 cods_nrc = data['nrc_code']
+career = data['code_car']
 
 # Create driver and navigate to login
 driver = webdriver.Firefox()
